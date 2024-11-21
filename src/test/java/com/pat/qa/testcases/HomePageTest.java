@@ -9,13 +9,13 @@ import com.pat.qa.base.TestBase;
 import com.pat.qa.pages.HomePage;
 
 public class HomePageTest extends TestBase {
-	
+
 	HomePage homepage;
-	
+
 	public HomePageTest() {
 		super();
 	}
-	
+
 	@BeforeMethod
 	public void setUp() throws InterruptedException {
 		initialization();
@@ -25,18 +25,17 @@ public class HomePageTest extends TestBase {
 		sleep(2000);
 		homepage.acceptDisclimer();
 	}
-    
+
 	@Test
 	public void testValidateTableAndDates() throws InterruptedException {
 		homepage.differentiateDates();
 	}
-	
+
 	@AfterMethod
 	public void tearDown() {
 		if (driver != null) {
-		driver.quit();
+			driver.quit();
 		}
 	}
-	
-	
+
 }
